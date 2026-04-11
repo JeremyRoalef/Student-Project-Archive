@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	height: 100%; /**/
+}
+
+body{
+	width: 100%; /*Remove horizontal margins from parent element*/
+	height: 100%; /*Remove vertical margins from parent element*/
+	font-size: clamp(18px, 3vh, 32px);
+	background-color: lightgray;
+	display: flex; /*Structures the content to fit in a flexbox*/
+	flex-direction: column; /*Structures the flexbox's content vertically*/
+}
+
+header, footer{
+		width: 100%;
+		background-color: gray;
+}
+main{
+	flex: 1; /*Extends the content to fit the size of the screen if the content is too little*/
+}
+
+.main-container{
+	padding: 2%; /*Add padding from header/footer and left/right*/
+	width: 95%;
+	max-width: 2500px;
+	margin: 0 auto;
+}
+.intro-card{
+	background-color: white;
+	font-size: clamp(18px, 3vh, 32px);
+}
+.project-highlights{
+	padding-top: 2%;
+	padding-bottom: 40%; /*increase this as necessary to make the footer fit below this element*/
+	/*Sort the elements in a grid-like structure*/
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /*Creates two columns, each taking up 1 'fractional unit' of the column's space*/
+	gap: 4% 2%; /*Adds spacing between the rows and columns, respectively*/
+}
+.project-highlight-card{
+	/*The card needs to display the text and image in a flex colum*/
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 1%;
+	height: 100%;
+	aspect-ratio: 3 / 4;
+}
+.project-highlight-card:nth-child(even){ /*enforces this style on every other card using project-highlight-card style*/
+	transform: translateY(50%); /*If the card is an even number, then it gets pushed down along the grid, creating a zig-zag pattern across the grid*/
+}
+.project-highlight-card h3{
+	text-align: center;
+}
+.project-highlight-card img{
+	/*The card's image must fill up the remaining space of the card*/
+	flex; 1;
+	width: 100%; /*prevent the image from overriding the grid's width*/
+	height: 100%;
+	object-fit: cover;
+	padding: .5%;
+}
