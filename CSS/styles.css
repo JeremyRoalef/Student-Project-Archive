@@ -42,6 +42,7 @@ main{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /*Creates two columns, each taking up 1 'fractional unit' of the column's space*/
 	gap: 4% 2%; /*Adds spacing between the rows and columns, respectively*/
+	place-items: center;
 }
 .project-highlight-card{
 	/*The card needs to display the text and image in a flex colum*/
