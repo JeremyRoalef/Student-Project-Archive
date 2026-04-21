@@ -49,6 +49,9 @@ a:hover{
 a:active{
 	color: white;
 }
+summary:hover{
+	color: lightgray;
+}
 .main-container{
 	padding: 2%; /*Add padding from header/footer and left/right*/
 	width: 95%;
@@ -68,6 +71,18 @@ a:active{
 .archive-links{
 	padding-right: 5%;
 	color: white;
+}
+.dropdown{
+	color: white;
+	padding-left: 1%;
+	margin-left: 3%;
+	margin-right: 3%;
+	background-color: #00502f;
+	border-radius: 3%;
+}
+.dropdown-content{
+	margin-left: 1%;
+	margin-right: 1%;
 }
 
 /*Landing Page Styling*/
@@ -137,6 +152,9 @@ a:active{
 .table-of-contents ul ul ul ul{
 	margin-left: 1.5%; /*More spacing from previous ul*/
 }
-
+.semesters{
+	display: flex;
+	flex-direction: column;
+}
 
 /*Student Page Styling*/
