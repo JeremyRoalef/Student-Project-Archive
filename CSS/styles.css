@@ -1,13 +1,12 @@
+/*General Styling*/
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 html{
-	height: 100%; /**/
+	height: 100%;
 }
-
 body{
 	width: 100%; /*Remove horizontal margins from parent element*/
 	height: 100%; /*Remove vertical margins from parent element*/
@@ -19,14 +18,12 @@ body{
 	/*Color*/
 	background-color: #303030;
 }
-
 header, footer{
 	min-height: 10%;	
 	width: 100%;
 	background-color: #00502f;
 	text-color: white;
 }
-
 main{
 	flex: 1; /*Extends the content to fit the size of the screen if the content is too little*/
 }
@@ -36,7 +33,22 @@ nav{
 	align-items: center;
 	height: 100%;
 }
-
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+a:link{
+	color: white;
+}
+a:visited{
+	color: white;
+}
+a:hover{
+	color: lightgray;
+}
+a:active{
+	color: white;
+}
 .main-container{
 	padding: 2%; /*Add padding from header/footer and left/right*/
 	width: 95%;
@@ -44,6 +56,21 @@ nav{
 	margin: 0 auto;
 	gap: 2%;
 }
+.game-programming-link{
+	margin-right: auto;
+	padding-left: 5%;
+}
+.game-programming-link img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+.archive-links{
+	padding-right: 5%;
+	color: white;
+}
+
+/*Landing Page Styling*/
 .intro-card{
 	background-color: #00502f;
 	color: white;
@@ -87,31 +114,29 @@ nav{
 	border-radius: 3%;
 }
 
-.game-programming-link{
-	margin-right: auto;
-	padding-left: 5%;
+/*Project Page Styling*/
+.table-of-contents{
+	padding: 1%;
+	background-color: #00502f;
+}
+.table-of-contents h1{
+	color: orange;
+	font-size: 100%;
+	padding-bottom: 1%;
+}
+.table-of-contents ul{
+	margin-left: 1%;
+	list-style-type: none; /*No bullet points*/
+}
+.table-of-contents ul ul{
+	margin-left: 1.5%; /*More spacing from previous ul*/
+}
+.table-of-contents ul ul ul{
+	margin-left: 1.5%; /*More spacing from previous ul*/
+}
+.table-of-contents ul ul ul ul{
+	margin-left: 1.5%; /*More spacing from previous ul*/
 }
 
-.game-programming-link img {
-    max-width: 80%;
-    height: auto;
-    display: block;
-}
 
-.archive-links{
-	padding-right: 5%;
-	color: white;
-}
-
-a:link{
-	color: white;
-}
-a:visited{
-	color: white;
-}
-a:hover{
-	color: lightgray;
-}
-a:active{
-	color: white;
-}
+/*Student Page Styling*/
