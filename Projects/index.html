@@ -31,63 +31,44 @@
 		
 		
 		<!--Main content of the page-->
-		<main class = "main-container">
-			<!--Table of Contents-->
-			<section class = "table-of-contents">
-				<h1>Table of Contents</h1>
-				<ul>
-					<li>
-						<a href = "#f24">Fall 2024</a>
-						<ul>
-							<li><a href = "#f24-113">CITA 113: Introduction to Game Design & Development</a></li>
-							<li><a href = "#f24-212">CITA 212: Fundamentals of Game Design</a></li>
-						</ul>
-					</li>
-					<li><a href = "#2">Fall 2025</a></li>
-					<li><a href = "#3">3</a></li>
-					<li><a href = "#4">4</a></li>
-				</ul>
-			</section>
-			
-			<br>
-			
+		<main class = "main-container">			
 			<!--Semesters-->
 			<section class = "semesters">
-				
-				<!--Fall 2024------------------------------------
-					Course content available:
-						CITA 113: 
-							Breakthrough
-							Platformer
-							Space Rocks
-							Final Projects
-						CITA 212:
-							Quiz Master
-							Laser Defender
-							Final Projects
-				-->
-				<details class = "dropdown">
-					<summary>Fall 2024</summary>
-					<div class = "dropdown-content" id ="f24">
-						<!--CITA 113--------------------------->
-						<details>
-							<summary>CITA 113: Introduction to Game Design & Development</summary>
-							<div class = "dropdown-content" id = "f24-113">
-								This is where CITA 113 projects will go (eventually)
-							</div>
-						</details>
-						<!--End of 113------------------------>
-						
-						<!--CITA 212-------------------------->
-						<details>
-							<summary>CITA 113: Introduction to Game Design & Development</summary>
-							<div class = "dropdown-content" id = "f24-212">
-								This is where CITA 212 projects will go (eventually)
-							</div>
-						</details>
-						<!--End of 212------------------------>
+			
+				<!--Fall 2024 Semester-->
+				<div class = "semester-container">
+					<h1>Fall 2024</h1>
+					<button class = "course-button" onclick = "openCourse(this, 'f24-113')">CITA 113</button>
+					<button class = "course-button" onclick = "openCourse(this, 'f24-212')">CITA 212</button>
+					
+					<!--F24 CITA 113 Content-->
+					<div class = "course-content" id = "f24-113">
+						<h1>CITA 113</h1>
 					</div>
-				</details>
+					
+					<!--F24 CITA 212 Content-->
+					<div class = "course-content" id = "f24-212">
+						<h1>CITA 212</h1>
+					</div>
+				</div>
+				
+				<!--Fall 2025 Semester-->
+				<div class = "semester-container">
+					<h1>Fall 2024</h1>
+					<button class = "course-button" onclick = "openCourse(this, 'f25-113')">CITA 113</button>
+					<button class = "course-button" onclick = "openCourse(this, 'f25-212')">CITA 212</button>
+					
+					<!--F24 CITA 113 Content-->
+					<div class = "course-content" id = "f25-113">
+						<h1>CITA 113</h1>
+					</div>
+					
+					<!--F24 CITA 212 Content-->
+					<div class = "course-content" id = "f25-212">
+						<h1>CITA 212</h1>
+					</div>
+				</div>
+
 			</section>
 			
 		</main>
@@ -99,3 +80,21 @@
 		</footer>
 	</body>
 </html>
+
+<script>
+	//Function to show/hide courses for each semester
+	function openCourse(button, courseID){
+		//Find the parent container for the button
+		const semester = button.closest(".semester-container");
+	
+		//Hide all courses for the semester
+		const courses = semester.querySelectorAll(".course-content");
+		courses.forEach(c => c.classList.remove('active'));
+		
+		//Show course with the corresponding ID for the given semester container
+		semester.querySelector("#" + courseID).classList.add('active');
+	}
+	
+	//Show default courses for each semester
+	document.addEventListener("DOMContentLoaded", () => {openCourse("f24-113")});
+</script>

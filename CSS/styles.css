@@ -158,3 +158,9 @@ summary:hover{
 }
 
 /*Student Page Styling*/
+.course-content{
+	display: none;
+}
+.course-content.active{
+	display: block;
+}
