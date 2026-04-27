@@ -156,11 +156,71 @@ summary:hover{
 	display: flex;
 	flex-direction: column;
 }
+.semester-metadata{
+	margin-bottom: 2%;
+}
 
 /*Student Page Styling*/
-.course-content{
+.project-content{
 	display: none;
+	flex-direction: column;
+	background-color: #00502f;
+	gap: 1%;
+	border-radius: 3%;
 }
-.course-content.active{
+.project-upper-content{
+	margin: 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.project-metadata{
+	flex: 6;
+	color: white;
+}
+.project-metadata h1{
+	font-size: clamp(24px, 5vh, 48px);
+	margin-left: 4%;
+}
+.project-metadata ul{
+	list-style-type: none;
+	margin-left: 4%;
+}
+
+.project-image{
+	flex: 4;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-image img{
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4/3;
+	object-fit: cover;
 	display: block;
+	border-radius: 5%;
+}
+.project-content.active{
+	display: flex;
+}
+.project-deliverables{
+	margin: 2% 2%;
+}
+.project-content hr{
+	margin: 2% 2%;
+}
+.semester-course-projects{
+	/*Sort the elements in a grid-like structure*/
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /*Creates three columns, each taking up 1 'fractional unit' of the column's space*/
+	gap: 1rem;
+	justify-items: stretch;
+	align-items: start;
+	margin-bottom: 4%;
 }

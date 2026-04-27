@@ -37,19 +37,71 @@
 			
 				<!--Fall 2024 Semester-->
 				<div class = "semester-container">
-					<h1>Fall 2024</h1>
-					<button class = "course-button" onclick = "openCourse(this, 'f24-113')">CITA 113</button>
-					<button class = "course-button" onclick = "openCourse(this, 'f24-212')">CITA 212</button>
+				
+					<!--Section off the metadata for the semester-->
+					<section class = "semester-metadata">
+						<h1>Fall 2024</h1>
+						<button class = "course-button" onclick = "openCourse(this, 'f24-113')">CITA 113</button>
+						<button class = "course-button" onclick = "openCourse(this, 'f24-212')">CITA 212</button>
+					</section>
 					
-					<!--F24 CITA 113 Content-->
-					<div class = "course-content" id = "f24-113">
-						<h1>CITA 113</h1>
-					</div>
 					
-					<!--F24 CITA 212 Content-->
-					<div class = "course-content" id = "f24-212">
-						<h1>CITA 212</h1>
-					</div>
+					<!--Section for the projects that will be displayed for the semester-->
+					<section class = "semester-course-projects">
+					
+						<!--F24 CITA 113 Projects-->
+						<div class = "project-content" id = "f24-113">
+							<div class = "project-upper-content">
+							
+								<!--the metadata for the project-->
+								<section class = "project-metadata">
+								
+									<!--Name of the project-->
+									<h1>Space Rocks</h1>
+									
+									<!--Project Authors-->
+									<ul>
+										<li>Joe Schmoe</li>
+										<li>Billy Bob</li>
+									</ul>
+									
+								</section>
+								
+								<!--An image of the project-->
+								<section class = "project-image">
+									<img src = "images/placeholder.jpg" alt = "Project Image">
+								</section>
+							</div>
+							
+							<hr>
+							
+							<div class = "project-deliverables">
+								<!--Add/Change the deliverables for the project's needs-->
+								<p><a href = "CHANGEME.com">Play</a></p>
+								<p><a href = "CHANGEME.com">GitHub</a></p>
+								<p><a href = "CHANGEME.pdf" download>Report</a></p>
+								<p><a href = "CHANGEME.pdf" download>Presentation</a></p>
+							</div>
+						</div>
+						
+						<div class = "project-content" id = "f24-113">
+							<h1>CITA 113</h1>
+						</div>
+						
+						<div class = "project-content" id = "f24-113">
+							<h1>CITA 113</h1>
+						</div>
+					
+						<div class = "project-content" id = "f24-113">
+							<h1>CITA 113</h1>
+						</div>
+					
+						<!--F24 CITA 212 Content-->
+						<div class = "project-content" id = "f24-212">
+							<h1>CITA 212</h1>
+						</div>
+					</section>
+					
 				</div>
 				
 				<!--Fall 2025 Semester-->
@@ -59,12 +111,12 @@
 					<button class = "course-button" onclick = "openCourse(this, 'f25-212')">CITA 212</button>
 					
 					<!--F24 CITA 113 Content-->
-					<div class = "course-content" id = "f25-113">
+					<div class = "project-content" id = "f25-113">
 						<h1>CITA 113</h1>
 					</div>
 					
 					<!--F24 CITA 212 Content-->
-					<div class = "course-content" id = "f25-212">
+					<div class = "project-content" id = "f25-212">
 						<h1>CITA 212</h1>
 					</div>
 				</div>
@@ -88,11 +140,11 @@
 		const semester = button.closest(".semester-container");
 	
 		//Hide all courses for the semester
-		const courses = semester.querySelectorAll(".course-content");
+		const courses = semester.querySelectorAll(".project-content");
 		courses.forEach(c => c.classList.remove('active'));
 		
 		//Show course with the corresponding ID for the given semester container
-		semester.querySelector("#" + courseID).classList.add('active');
+		semester.querySelectorAll("#" + courseID).forEach(p => p.classList.add('active'));
 	}
 	
 	//Show default courses for each semester
