@@ -130,44 +130,68 @@ summary:hover{
 }
 
 /*Project Page Styling*/
-.table-of-contents{
-	padding: 1%;
-	background-color: #00502f;
-}
-.table-of-contents h1{
-	color: orange;
-	font-size: 100%;
-	padding-bottom: 1%;
-}
-.table-of-contents ul{
-	margin-left: 1%;
-	list-style-type: none; /*No bullet points*/
-}
-.table-of-contents ul ul{
-	margin-left: 1.5%; /*More spacing from previous ul*/
-}
-.table-of-contents ul ul ul{
-	margin-left: 1.5%; /*More spacing from previous ul*/
-}
-.table-of-contents ul ul ul ul{
-	margin-left: 1.5%; /*More spacing from previous ul*/
-}
 .semesters{
 	display: flex;
 	flex-direction: column;
 }
+
+
 .semester-metadata{
 	margin-bottom: 2%;
 }
-
-/*Student Page Styling*/
+.semester-metadata h1{
+	color: #3FBA81;
+}
+.semester-metadata button{
+	background-color: #0B4D04;
+	color: white;
+	width: 12vw;
+	height: 6vh;
+	font-size: 90%;
+	border-radius: 10%;
+}
+.semester-metadata button:hover{
+	background-color: #0F7007;
+}
 .project-content{
-	display: none;
 	flex-direction: column;
 	background-color: #00502f;
 	gap: 1%;
 	border-radius: 3%;
+	
+	/*Fade in settings*/
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px);
+	position: absolute;
+	pointer-events: none;
 }
+
+.project-content.active{
+	/*Fade in effect setup*/
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0); /*Causes an upward movement while fading in*/
+	position: relative;
+	pointer-events: auto;
+	animation: fadeIn 0.25s ease; /*Used with keyframe setup (see below)*/
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.semester-container{
+	position: relative;
+}
+
 .project-upper-content{
 	margin: 2%;
 	display: flex;
@@ -211,6 +235,7 @@ summary:hover{
 }
 .project-deliverables{
 	margin: 2% 2%;
+	color: white;
 }
 .project-content hr{
 	margin: 2% 2%;
