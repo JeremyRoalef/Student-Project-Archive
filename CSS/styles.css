@@ -64,7 +64,7 @@ summary:hover{
 	padding-left: 5%;
 }
 .game-programming-link img {
-    max-width: 80%;
+    max-width: clamp(50%, 10vw, 80%);
     height: auto;
     display: block;
 }
@@ -141,13 +141,14 @@ summary:hover{
 }
 .semester-metadata h1{
 	color: #3FBA81;
+	font-size: clamp(18px, 3.5vw, 32px);
 }
 .semester-metadata button{
 	background-color: #0B4D04;
 	color: white;
-	width: 12vw;
-	height: 6vh;
-	font-size: 90%;
+	width: clamp(18px, 12vw, 512px);
+	height: clamp(18px, 4vh, 512px);
+	font-size: clamp(5px, 1.3vw, 32px);
 	border-radius: 10%;
 }
 .semester-metadata button:hover{
@@ -200,6 +201,9 @@ summary:hover{
 	align-items: flex-start;
 	gap: 1rem;
 }
+.project-upper-content p{
+	font-size: clamp(5px, 1.3vw, 32px);
+}
 
 .project-metadata{
 	flex: 6;
@@ -236,7 +240,17 @@ summary:hover{
 .project-deliverables{
 	margin: 2% 2%;
 	color: white;
+	
 }
+
+.project-content h1{
+	font-size: clamp(6px, 2vw, 96px);
+}
+
+.project-content ul, p{
+	font-size: clamp(5px, 1.3vw, 32px);
+}
+
 .project-content hr{
 	margin: 2% 2%;
 }
