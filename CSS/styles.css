@@ -102,6 +102,14 @@ summary:hover{
 	gap: 4% 2%; /*Adds spacing between the rows and columns, respectively*/
 	place-items: center;
 }
+.project-highlight-container h2{
+	margin: 2% 40%;
+	padding: 0.5%;
+	text-align: center;
+	background-color: #00502f;
+	border-radius: 12px;
+	color: white;
+}
 .project-highlight-card{
 	/*The card needs to display the text and image in a flex colum*/
 	display: flex;
