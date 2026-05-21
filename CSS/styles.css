@@ -59,6 +59,9 @@ summary:hover{
 	margin: 0 auto;
 	gap: 2%;
 }
+.main-container h1{
+	color: #3FBA81;
+}
 .game-programming-link{
 	margin-right: auto;
 	padding-left: 5%;
@@ -164,7 +167,7 @@ summary:hover{
 .semester-metadata{
 	margin-bottom: 2%;
 }
-.semester-metadata h1{
+.semester-metadata h2{
 	color: #3FBA81;
 	font-size: clamp(18px, 3.5vw, 32px);
 }
